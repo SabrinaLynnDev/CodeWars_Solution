@@ -1,0 +1,12 @@
+Write a function to split a string and convert it into an array of words.
+
+
+
+*****************************************************************************************
+
+function stringToArray(string){
+
+	//Use trim to remove all the whitespace then use split the string into array by whitespace 
+  return string.trim().split(" ")
+
+}
