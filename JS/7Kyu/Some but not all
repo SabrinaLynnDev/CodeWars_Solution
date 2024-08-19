@@ -1,0 +1,16 @@
+Description
+Your task is to create a function that given a sequence and a predicate, returns True if only some (but not all) the elements in the sequence are True after applying the predicate
+
+--------------------------------------------------
+Solution setup:
+
+const someButNotAll = (seq,pred) => {
+  return false
+}
+
+-------------------------------------------------
+
+const someButNotAll = (seq,pred) => {
+  const arr = [...seq];
+  return arr.some(pred) && !arr.every(pred);
+}
