@@ -1,0 +1,23 @@
+Make me slow! Calling makeMeSlow() should take at least 7 seconds.
+
+Test Cases:
+
+const { expect } = require('chai')
+
+describe('Execution Speed Test', () => {
+  it('Should Take >= 7000ms', () => {
+    const start = new Date().getTime()
+    makeMeSlow()
+    const duration = new Date().getTime() - start
+
+    expect(duration).to.be.at.least(7000, 'Function finished in too few milliseconds');
+  })
+})
+
+- - - - - - - - - - - - - - - - - - - - - - -
+Solution:
+
+function makeMeSlow() {
+  const startTime = Date.now();
+  while (Date.now() - startTime < 7000) {}
+}
