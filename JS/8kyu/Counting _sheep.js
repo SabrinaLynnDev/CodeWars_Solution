@@ -18,7 +18,7 @@ Hint: Don't forget to check for bad values like null/undefined
 
 //My solution:
 
-//PREP
+
 
 //boolean value-> true or false
 //                        false-> 1. not exist 2. null/undefined
