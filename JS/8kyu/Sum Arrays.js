@@ -25,7 +25,7 @@ You can assume that you do get an array and if the array is empty, return 0.
 
 function sum (numbers) {
     
-    //ensure arr is empty case or not first
+    //tell arr is empty case or not first
     if (numbers.length === 0){    
       return 0
     }else { //if not empty value, then use a for loop to calculate the sum of the arr
