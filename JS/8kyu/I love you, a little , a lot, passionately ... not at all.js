@@ -19,10 +19,7 @@ Your goal in this kata is to determine which phrase the girls would say at the l
  for a flower of a given number of petals. The number of petals is always greater than 0.
  * 
  */
-//prep
 
-// p input -> number to different word
-//r last petal-string
 
 
 const phrases = [
