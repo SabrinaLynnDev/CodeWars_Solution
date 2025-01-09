@@ -9,8 +9,7 @@ You should not remove or add elements from/to the array.
  * 
  */
 
-//example
-//split join ***
+
 
 function twoSort(s) {
     return s.sort()[0].split('').join('***');
