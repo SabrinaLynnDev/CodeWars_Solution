@@ -23,3 +23,39 @@ Input: ["sheep", "sheep", "wolf"]
 Output: "Pls go away and stop eating my sheep"
  */
 
+//my solution:   jan.17.25 
+//it is wrong bc the index order should be reversed
+function warnTheSheep(queue) {
+    //prep 
+    //p-> array of word of sheep and wolf
+    //r-> 1. closest ani 2. sheep N
+    let i = 1;
+    for (i = 1; i < queue.length; i++){
+      if (queue[i] === "wolf" && i === 1){
+        return "Pls go away and stop eating my sheep"
+      }else (queue[i] === "wolf" && i > 1)
+        return "Oi! Sheep number "+ [i - 1]+ "! You are about to be eaten by a wolf!"
+    }
+  }
+
+//other right solutions:  jan.21.2025
+  function warnTheSheep(queue) {
+    const position = queue.reverse().indexOf('wolf');
+    return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+  }
+
+  function warnTheSheep(queue) {
+    let sheepIndex = queue.length - queue.indexOf('wolf') - 1;
+    if (sheepIndex === 0)
+        return 'Pls go away and stop eating my sheep';
+    return `Oi! Sheep number ${sheepIndex}! You are about to be eaten by a wolf!`;
+}
+
+function warnTheSheep(queue) {
+    var sheep = queue.length - queue.indexOf('wolf') - 1
+      if (sheep ==0 ){
+        return "Pls go away and stop eating my sheep"
+      } else {
+        return "Oi! Sheep number "+ sheep +"! You are about to be eaten by a wolf!"
+      }
+  }
